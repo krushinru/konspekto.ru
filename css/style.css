@@ -19,7 +19,7 @@
     color: #888;
     }
 
-  a {
+  a, a:hover {
     text-decoration: none;
     border-bottom: 1px solid;
   }
