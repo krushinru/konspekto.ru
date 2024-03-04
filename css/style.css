@@ -1,0 +1,25 @@
+#timer {
+  font-size: 2em;
+}
+
+.custom-select-sm {
+  padding: .25rem .5rem;
+  font-size: .875rem;
+  line-height: 1.5;
+  width: 100px; /* Автоматически подстраивает ширину под содержимое */
+}
+
+#player {
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .footer, .footer a {
+    color: #888;
+    }
+
+  a {
+    text-decoration: none;
+    border-bottom: 1px solid;
+  }
