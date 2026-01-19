@@ -124,7 +124,7 @@ function loadSubtitles(videoId, lang = 'ru') {
 
 // === Загрузка списка доступных языков субтитров ===
 function loadSubtitleLanguages(videoId) {
-  const captionsUrl = `https://video.google.com/timedtext?type=list&v=${videoId}`;
+  const captionsUrl = `https://video.google.com/timedtext?lang=ru&v=${videoId}`;
 
   fetch(capsionsUrl)
     .then(response => response.text())
