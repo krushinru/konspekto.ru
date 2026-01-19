@@ -27,3 +27,31 @@
   a:hover {
     text-decoration: none;
   }
+
+  .transcript-container h6 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.transcript-container p {
+  margin: 0.5rem 0;
+  padding: 0.3rem;
+  cursor: text;
+  user-select: text;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.transcript-container p:hover {
+  background-color: #f0f0f0;
+}
+
+#transcriptSearch {
+  font-size: 0.85rem;
+}
+
+#insertTranscriptBtn {
+  font-size: 0.85rem;
+}
