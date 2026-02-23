@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#0f0f0f"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8c06a"/>
+      <stop offset="100%" stop-color="#b8893a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="110" fill="url(#bg)"/>
+
+  <!-- Subtle inner border -->
+  <rect x="6" y="6" width="500" height="500" rx="106" fill="none" stroke="#2a2a2a" stroke-width="2"/>
+
+  <!-- Notebook body -->
+  <rect x="118" y="96" width="248" height="310" rx="14" fill="#1e1e1e" stroke="#2e2e2e" stroke-width="2"/>
+
+  <!-- Spiral binding holes -->
+  <circle cx="152" cy="134" r="9" fill="#0f0f0f" stroke="#3a3a3a" stroke-width="1.5"/>
+  <circle cx="152" cy="174" r="9" fill="#0f0f0f" stroke="#3a3a3a" stroke-width="1.5"/>
+  <circle cx="152" cy="214" r="9" fill="#0f0f0f" stroke="#3a3a3a" stroke-width="1.5"/>
+  <circle cx="152" cy="254" r="9" fill="#0f0f0f" stroke="#3a3a3a" stroke-width="1.5"/>
+  <circle cx="152" cy="294" r="9" fill="#0f0f0f" stroke="#3a3a3a" stroke-width="1.5"/>
+  <circle cx="152" cy="334" r="9" fill="#0f0f0f" stroke="#3a3a3a" stroke-width="1.5"/>
+  <circle cx="152" cy="374" r="9" fill="#0f0f0f" stroke="#3a3a3a" stroke-width="1.5"/>
+
+  <!-- Vertical spine separator -->
+  <line x1="170" y1="96" x2="170" y2="406" stroke="#2a2a2a" stroke-width="1.5"/>
+
+  <!-- Lines of text (monospace feel) -->
+  <!-- Line 1 - timestamp in gold -->
+  <rect x="186" y="148" width="82" height="8" rx="4" fill="url(#gold)" opacity="0.9"/>
+  <!-- Line 1 - text -->
+  <rect x="278" y="148" width="66" height="8" rx="4" fill="#3a3a3a"/>
+
+  <!-- Line 2 -->
+  <rect x="186" y="188" width="82" height="8" rx="4" fill="url(#gold)" opacity="0.75"/>
+  <rect x="278" y="188" width="88" height="8" rx="4" fill="#3a3a3a"/>
+
+  <!-- Line 3 -->
+  <rect x="186" y="228" width="82" height="8" rx="4" fill="url(#gold)" opacity="0.6"/>
+  <rect x="278" y="228" width="52" height="8" rx="4" fill="#3a3a3a"/>
+
+  <!-- Line 4 - active / current line, slightly lighter -->
+  <rect x="182" y="266" width="200" height="20" rx="6" fill="#252520" opacity="0.8"/>
+  <rect x="186" y="271" width="82" height="8" rx="4" fill="url(#gold)"/>
+  <!-- Cursor blink indicator -->
+  <rect x="278" y="271" width="3" height="8" rx="1.5" fill="#d4a853" opacity="0.9"/>
+
+  <!-- Faded lines below -->
+  <rect x="186" y="308" width="82" height="8" rx="4" fill="#2a2a2a"/>
+  <rect x="278" y="308" width="72" height="8" rx="4" fill="#252525"/>
+  <rect x="186" y="348" width="82" height="8" rx="4" fill="#222222"/>
+  <rect x="278" y="348" width="60" height="8" rx="4" fill="#202020"/>
+
+  <!-- Timer badge - bottom right corner of notebook -->
+  <circle cx="366" cy="372" r="42" fill="#0f0f0f" stroke="#2e2e2e" stroke-width="2"/>
+  <circle cx="366" cy="372" r="36" fill="#141410" stroke="#3a3218" stroke-width="1.5"/>
+
+  <!-- Clock tick marks -->
+  <line x1="366" y1="342" x2="366" y2="348" stroke="#d4a853" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="366" y1="396" x2="366" y2="402" stroke="#5c5650" stroke-width="2" stroke-linecap="round"/>
+  <line x1="336" y1="372" x2="342" y2="372" stroke="#5c5650" stroke-width="2" stroke-linecap="round"/>
+  <line x1="390" y1="372" x2="396" y2="372" stroke="#5c5650" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Clock hands -->
+  <line x1="366" y1="372" x2="366" y2="354" stroke="url(#gold)" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="366" y1="372" x2="380" y2="380" stroke="#e8e2d9" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <!-- Center dot -->
+  <circle cx="366" cy="372" r="3" fill="url(#gold)"/>
+</svg>
