@@ -3,58 +3,217 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 — страница не найдена | Конспекто</title>
-<meta name="description" content="Конспекто — это уникальный онлайн-блокнот, который автоматически отмечает время для каждой заметки. Идеально подходит для контент-креаторов для комментирования видео и текстов, студентов для фиксации моментов в лекциях и менеджеров для точной фиксации важных моментов на совещаниях.">
-<meta name="keywords" content="Конспекто, онлайн-блокнот, блокнот с таймкодами, заметки с временем, образование, управление, контент-креация, студенты, менеджеры, видео комментарии, учебные заметки, бизнес заметки">
-<meta name="robots" content="index, follow">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-<link rel="icon" sizes="16x16" href="images/favicon-16x16.png">
-<link rel="icon" sizes="32x32" href="images/favicon-32x32.png">
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-</head>
-<body style="background: #f7f7f7">
-  
-<div class="container mt-3">
-  <nav class="navbar navbar-expand">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="https://konspekto.ru">Конспекто</a>
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="https://krushin.ru/all/konspekto">Что это?
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://t.me/krushin_ru">Написать автору</a>
-          </li>
+<title>404 — Конспекто</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Literata:ital,opsz,wght@0,7..72,300;1,7..72,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        </ul>
-    </div>
-  </nav>
-  <main class="mx-auto w-[90%] flex-col">
-  <div class="row g-2">
-      <div class="col-md-7 order-md-first col-lg-8">
-      <div class="rounded-lg bg-white p-4">
-        <h1>404</h1>
-        <p>Страница не найдена</p>
-    </div>
+  :root {
+    --bg:      #0f0f0f;
+    --bg2:     #181818;
+    --border:  #2e2e2e;
+    --text:    #e8e2d9;
+    --text2:   #9a9288;
+    --text3:   #5c5650;
+    --accent:  #d4a853;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-body: 'Literata', Georgia, serif;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100%;
+  }
+
+  header {
+    padding: 0 32px;
+    height: 56px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    background: var(--bg2);
+  }
+
+  .logo {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+  }
+  .logo span { color: var(--text2); font-weight: 400; }
+
+  /* ─── MAIN ─── */
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 32px;
+  }
+
+  .card {
+    max-width: 480px;
+    width: 100%;
+  }
+
+  .timestamp {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .timestamp::after {
+    content: '';
+    flex: 1;
+    max-width: 48px;
+    height: 1px;
+    background: var(--border);
+  }
+
+  h1 {
+    font-family: var(--font-mono);
+    font-size: clamp(4rem, 16vw, 7rem);
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 24px;
+  }
+  h1 span {
+    color: var(--text3);
+  }
+
+  .description {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: var(--text2);
+    line-height: 1.7;
+    margin-bottom: 36px;
+    font-style: italic;
+    border-left: 2px solid var(--border);
+    padding-left: 16px;
+  }
+
+  .actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 7px;
+    padding: 9px 18px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.16s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #0a0a0a;
+    border-color: var(--accent);
+  }
+  .btn-primary:hover { background: #b8893a; border-color: #b8893a; }
+  .btn-ghost {
+    background: transparent;
+    color: var(--text2);
+    border-color: #2e2e2e;
+  }
+  .btn-ghost:hover { color: var(--text); border-color: #4a4a4a; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    height: 40px;
+    border-top: 1px solid var(--border);
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    background: var(--bg2);
+  }
+  footer p, footer a {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--text3);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+  }
+  footer a:hover { color: var(--text2); }
+
+  /* ─── ANIMATION ─── */
+  .card { animation: up 0.4s ease both; }
+  @keyframes up {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── SCROLLBAR ─── */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #2e2e2e; border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="/" class="logo">конспекто<span>.ru</span></a>
+</header>
+
+<main>
+  <div class="card">
+    <div class="timestamp" id="ts">00:00:00</div>
+    <h1>4<span>0</span>4</h1>
+    <p class="description">
+      Эта страница не найдена. Кажется, вы свернули не туда — <br>или ссылка устарела.
+    </p>
+    <div class="actions">
+      <a href="/" class="btn btn-primary">
+        <svg width="9" height="10" viewBox="0 0 9 10" fill="currentColor"><polygon points="0,0 9,5 0,10"/></svg>
+        На главную
+      </a>
+      <a href="mailto:akrushin@gmail.com" class="btn btn-ghost">Написать автору</a>
     </div>
   </div>
-  </main>
-  <footer class="footer my-4 text-left">
-    <p><small>Сделал <a href="https://krushin.ru">Александр Крушин</a> в 2024 году</small></p>
-  </footer>
-</div>
+</main>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://www.youtube.com/iframe_api"></script>
-<script src="js/app.js"></script></script>
+<footer>
+  <p>Сделал <a href="https://krushin.me" target="_blank">Александр Крушин</a></p>
+</footer>
+
+<script>
+  // Show a running timestamp for fun
+  const ts = document.getElementById('ts');
+  const start = Date.now();
+  function tick() {
+    const s = Math.floor((Date.now() - start) / 1000);
+    const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
+    ts.textContent = [h, m, sec].map(v => String(v).padStart(2, '0')).join(':');
+  }
+  tick();
+  setInterval(tick, 1000);
+</script>
 
 </body>
 </html>
